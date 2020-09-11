@@ -26,7 +26,7 @@ const App = () => {
           </Col>
         </Row>
       </Container>
-      <Footer footerText='Github repository' repoLink='https://github.com'/>
+      <Footer footerText='Github repository' repoLink='https://github.com/alvaroponguta/technical-test'/>
     </div>
   );
 }
