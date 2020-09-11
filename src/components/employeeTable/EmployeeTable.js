@@ -7,11 +7,11 @@ const EmployeeTable = props => {
     const {idValue} = props;
     const [gridApi, setGridApi] = useState(null);
     const rowData = useRef([]);
-    const employeesData = useRowData().getRowData();
+    const dataHook = useRowData();
     const idIsDefined = idValue !== undefined;
 
     if (idIsDefined) {
-        rowData.current = employeesData;
+        rowData.current = dataHook.getRowData();
     }
 
     useEffect(() => {
