@@ -1,0 +1,28 @@
+{
+    "employees": [
+        {
+            "id": "as231sdsd23",
+            "name": "Celica",
+            "contractType": "Hourly Salary",
+            "hourlySalary": 20000
+        },
+        {
+            "id": "df231mfks88",
+            "name": "Mondeo",
+            "contractType": "Monthly Salary",
+            "monthlySalary": 3450000
+        },
+        {
+            "id": "kj231askj78",
+            "name": "Boxter",
+            "contractType": "Monthly Salary",
+            "monthlySalary": 8450000
+        },
+        {
+            "id": "nj231sdsd23",
+            "name": "Galler",
+            "contractType": "Hourly Salary",
+            "hourlySalary": 25000
+        }
+    ]
+}

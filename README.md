@@ -1,16 +1,32 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## JSON-SERVER (First step to run the app)
+
+Run the following line in your terminal:
+
+npm install -g json-server
+
+Then on the root of the project start the JSON Server with the
+following line:
+
+json-server --watch db.json
+
+It will start your server on the 3000 port.
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn start` (Second step to run the app)
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+It will ask you if you want to initiate the server in another port,
+because we are using the 3000 port for the JSON Server, please press 'Enter' or type 'Y' and press 'Enter'.
 
 ### `yarn test`
 

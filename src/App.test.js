@@ -1,9 +1,23 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
 import App from './App';
+import expect from 'expect';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('<App />', () => {
+  const appWrapper = shallow(<App />);
+
+  it('should match the snapshot', () => {
+    expect(appWrapper.html()).toMatchSnapshot();
+  });
+
+  it('shallow wrapper instance should be null', () => {
+    const instance = appWrapper.instance();
+
+    expect(instance).toBeNull();
+  });
+
+  it('should render style correctly', () => {
+    const div = appWrapper.find('div');
+    expect(div.props().className).toBe('App');
+  });
 });

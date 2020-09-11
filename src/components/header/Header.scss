@@ -1,0 +1,12 @@
+.header {
+    &-container {
+        background-color: #282c34;
+        min-height: 78px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        max-width: 100%;
+    }
+}

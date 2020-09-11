@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import Subtitle from './components/subtitle/Subtitle';
+import { Container, Row, Col } from 'react-bootstrap';
+import EmployeeForm from './components/employeeForm/EmployeeForm';
+import EmployeeTable from './components/employeeTable/EmployeeTable';
 
-function App() {
+const App = () => {
+  const [idValue, setIdValue] = useState(undefined);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header title='Technical Test'/>
+      <Container>
+        <Subtitle text='Employees Table'/>
+        <Row>
+          <Col>
+            <EmployeeForm callbackId={setIdValue}/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <EmployeeTable idValue={idValue}/>
+          </Col>
+        </Row>
+      </Container>
+      <Footer footerText='Github repository' repoLink='https://github.com'/>
     </div>
   );
 }
